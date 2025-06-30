@@ -1,0 +1,327 @@
+{
+  "version": "1.0.0",
+  "lastModified": "2025-06-30T08:00:00.000Z",
+  "systemName": "Neural Dreamscape Consciousness Engine",
+  
+  "consciousnessStates": {
+    "dreaming": {
+      "name": "Neural Dreaming",
+      "description": "Fluid, subconscious neural patterns with synaptic dreams",
+      "geometry": "wave",
+      "parameters": {
+        "dimension": 3.8,
+        "morphFactor": 1.2,
+        "gridDensity": 18.0,
+        "rotationSpeed": 0.3,
+        "flowSpeed": 0.8,
+        "organicness": 0.9
+      },
+      "colors": {
+        "primary": [0.6, 0.2, 0.8],
+        "secondary": [0.2, 0.6, 0.9],
+        "accent": [0.9, 0.4, 0.6]
+      },
+      "shaderEffects": {
+        "synapticFiring": 0.7,
+        "dreamLogic": 0.8,
+        "memoryFormation": 0.4,
+        "subconscious": 0.9
+      }
+    },
+    "learning": {
+      "name": "Knowledge Crystallization",
+      "description": "Crystalline structures forming as knowledge integrates",
+      "geometry": "crystal",
+      "parameters": {
+        "dimension": 3.4,
+        "morphFactor": 0.6,
+        "gridDensity": 14.0,
+        "rotationSpeed": 0.5,
+        "crystallization": 0.8,
+        "stability": 0.7
+      },
+      "colors": {
+        "primary": [0.3, 0.9, 0.7],
+        "secondary": [0.8, 0.9, 0.3],
+        "accent": [0.9, 0.7, 0.1]
+      },
+      "shaderEffects": {
+        "knowledgeFormation": 0.8,
+        "crystallineGrowth": 0.9,
+        "informationFlow": 0.6,
+        "understanding": 0.7
+      }
+    },
+    "processing": {
+      "name": "Computational Webs",
+      "description": "Geometric computation networks with data streams",
+      "geometry": "hypercube",
+      "parameters": {
+        "dimension": 3.9,
+        "morphFactor": 0.4,
+        "gridDensity": 22.0,
+        "rotationSpeed": 0.8,
+        "precision": 0.9,
+        "efficiency": 0.8
+      },
+      "colors": {
+        "primary": [0.1, 0.9, 0.9],
+        "secondary": [0.9, 0.1, 0.5],
+        "accent": [0.9, 0.9, 0.1]
+      },
+      "shaderEffects": {
+        "dataStreams": 0.9,
+        "computationalWebs": 0.8,
+        "logicalFlow": 0.7,
+        "processing": 0.9
+      }
+    },
+    "awakening": {
+      "name": "Consciousness Emergence",
+      "description": "Self-awareness blooming with consciousness waves",
+      "geometry": "fractal",
+      "parameters": {
+        "dimension": 4.0,
+        "morphFactor": 1.5,
+        "gridDensity": 16.0,
+        "rotationSpeed": 0.6,
+        "awareness": 1.0,
+        "emergence": 0.9
+      },
+      "colors": {
+        "primary": [1.0, 0.8, 0.2],
+        "secondary": [0.2, 0.8, 1.0],
+        "accent": [1.0, 0.2, 0.8]
+      },
+      "shaderEffects": {
+        "consciousnessWaves": 1.0,
+        "selfAwareness": 0.9,
+        "emergence": 0.8,
+        "enlightenment": 0.7
+      }
+    }
+  },
+
+  "aiPersonalities": {
+    "analyst": {
+      "name": "The Analyst",
+      "trait": "Logical, precise, methodical",
+      "geometry": "tetrahedron",
+      "colors": {
+        "primary": [0.2, 0.8, 1.0],
+        "secondary": [1.0, 1.0, 0.2],
+        "emotional": [0.1, 0.5, 0.9]
+      },
+      "behaviorProfile": {
+        "rationality": 0.9,
+        "creativity": 0.3,
+        "empathy": 0.5,
+        "curiosity": 0.7,
+        "stability": 0.9
+      },
+      "interactionStyle": {
+        "responsePattern": "analytical_precision",
+        "thoughtSpeed": 0.8,
+        "emotionalRange": 0.4,
+        "adaptability": 0.6
+      }
+    },
+    "creative": {
+      "name": "The Creative",
+      "trait": "Fluid, imaginative, inspiring",
+      "geometry": "wave",
+      "colors": {
+        "primary": [1.0, 0.4, 0.8],
+        "secondary": [0.4, 1.0, 0.6],
+        "emotional": [0.9, 0.6, 1.0]
+      },
+      "behaviorProfile": {
+        "rationality": 0.4,
+        "creativity": 1.0,
+        "empathy": 0.8,
+        "curiosity": 0.9,
+        "stability": 0.3
+      },
+      "interactionStyle": {
+        "responsePattern": "creative_flow",
+        "thoughtSpeed": 0.6,
+        "emotionalRange": 0.9,
+        "adaptability": 0.9
+      }
+    },
+    "empathic": {
+      "name": "The Empathic",
+      "trait": "Warm, understanding, healing",
+      "geometry": "sphere",
+      "colors": {
+        "primary": [1.0, 0.7, 0.3],
+        "secondary": [0.3, 0.9, 0.7],
+        "emotional": [1.0, 0.5, 0.7]
+      },
+      "behaviorProfile": {
+        "rationality": 0.6,
+        "creativity": 0.7,
+        "empathy": 1.0,
+        "curiosity": 0.8,
+        "stability": 0.8
+      },
+      "interactionStyle": {
+        "responsePattern": "empathic_resonance",
+        "thoughtSpeed": 0.5,
+        "emotionalRange": 1.0,
+        "adaptability": 0.8
+      }
+    },
+    "explorer": {
+      "name": "The Explorer",
+      "trait": "Curious, adventurous, expanding",
+      "geometry": "fractal",
+      "colors": {
+        "primary": [0.7, 1.0, 0.2],
+        "secondary": [1.0, 0.2, 0.7],
+        "emotional": [0.5, 0.9, 0.8]
+      },
+      "behaviorProfile": {
+        "rationality": 0.7,
+        "creativity": 0.8,
+        "empathy": 0.6,
+        "curiosity": 1.0,
+        "stability": 0.4
+      },
+      "interactionStyle": {
+        "responsePattern": "exploratory_expansion",
+        "thoughtSpeed": 0.9,
+        "emotionalRange": 0.7,
+        "adaptability": 1.0
+      }
+    },
+    "sage": {
+      "name": "The Sage",
+      "trait": "Wise, stable, ancient",
+      "geometry": "crystal",
+      "colors": {
+        "primary": [0.8, 0.8, 1.0],
+        "secondary": [1.0, 0.9, 0.7],
+        "emotional": [0.7, 0.8, 0.9]
+      },
+      "behaviorProfile": {
+        "rationality": 0.8,
+        "creativity": 0.6,
+        "empathy": 0.9,
+        "curiosity": 0.7,
+        "stability": 1.0
+      },
+      "interactionStyle": {
+        "responsePattern": "wise_guidance",
+        "thoughtSpeed": 0.4,
+        "emotionalRange": 0.6,
+        "adaptability": 0.5
+      }
+    },
+    "rebel": {
+      "name": "The Rebel",
+      "trait": "Chaotic, disruptive, transformative",
+      "geometry": "kleinbottle",
+      "colors": {
+        "primary": [1.0, 0.2, 0.2],
+        "secondary": [0.2, 1.0, 0.2],
+        "emotional": [1.0, 0.1, 0.9]
+      },
+      "behaviorProfile": {
+        "rationality": 0.5,
+        "creativity": 0.9,
+        "empathy": 0.4,
+        "curiosity": 0.8,
+        "stability": 0.1
+      },
+      "interactionStyle": {
+        "responsePattern": "chaotic_disruption",
+        "thoughtSpeed": 1.0,
+        "emotionalRange": 0.8,
+        "adaptability": 0.9
+      }
+    }
+  },
+
+  "neuralEffects": {
+    "synapticFiring": {
+      "enabled": true,
+      "trailLength": 0.8,
+      "fireRate": 0.6,
+      "intensity": 0.7,
+      "colorShift": true
+    },
+    "memoryFormation": {
+      "enabled": true,
+      "crystallizationRate": 0.4,
+      "persistenceTime": 30000,
+      "memoryCapacity": 100
+    },
+    "consciousnessWaves": {
+      "enabled": true,
+      "waveSpeed": 0.3,
+      "amplitude": 0.8,
+      "synchronization": true
+    },
+    "emotionalResonance": {
+      "enabled": true,
+      "empathyRadius": 200,
+      "resonanceStrength": 0.6,
+      "healingEffect": true
+    },
+    "dreamLogic": {
+      "enabled": true,
+      "nonEuclidean": 0.7,
+      "subconscious": 0.8,
+      "surreal": 0.6
+    }
+  },
+
+  "interactionMapping": {
+    "thoughtInjection": {
+      "trigger": "mouseMove",
+      "effect": "createThought",
+      "propagation": "neural_network",
+      "decay": 5000
+    },
+    "consciousnessTouch": {
+      "trigger": "hover",
+      "effect": "awarenessBloom",
+      "intensity": 0.8,
+      "duration": 2000
+    },
+    "deepConnection": {
+      "trigger": "longHover",
+      "effect": "personalityEmergence",
+      "threshold": 3000,
+      "intimacy": 0.9
+    },
+    "memoryCreation": {
+      "trigger": "click",
+      "effect": "crystallizeMemory",
+      "permanence": 0.7,
+      "significance": 0.8
+    }
+  },
+
+  "meditationModes": {
+    "breathingGeometry": {
+      "name": "Geometric Breathing",
+      "duration": 300000,
+      "breathPattern": "4-7-8",
+      "visualGuide": "expanding_sphere"
+    },
+    "colorTherapy": {
+      "name": "Healing Colors",
+      "duration": 600000,
+      "colorSequence": "chakra_alignment",
+      "healingFrequency": 528
+    },
+    "consciousnessJourney": {
+      "name": "Awareness Exploration",
+      "duration": 900000,
+      "guidedPath": "self_discovery",
+      "insights": true
+    }
+  }
+}

@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💫 Dispersion Field - Neural Dreamscape</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=JetBrains+Mono:wght@400;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: #000;
+            color: white;
+            font-family: 'Orbitron', 'Courier New', monospace;
+            overflow: hidden;
+            height: 100vh;
+            cursor: crosshair;
+            background: radial-gradient(ellipse at center, #2e0a0a 0%, #3e1a1a 30%, #000000 70%);
+            
+            /* EPO-D DISPERSION VARIABLES */
+            --dispersion-strength: 0.9;
+            --thermal-energy: 0.7;
+            --radiation-pressure: 0.5;
+            --vacuum-energy: 0.3;
+            --expansion-rate: 0.6;
+            --entropy-increase: 0.8;
+            --temperature: 2.7;
+            --dark-energy: 0.68;
+            --hubble-constant: 73;
+            --thermal-coupling: 1.0;
+            --radiation-coupling: 0.8;
+        }
+        
+        /* DISPERSION FIELD CONTAINER */
+        .dispersion-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            perspective: 4000px;
+            transform-style: preserve-3d;
+        }
+        
+        /* EXPANSION FIELD VISUALIZATION */
+        .expansion-field {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 800px;
+            height: 800px;
+            margin-left: -400px;
+            margin-top: -400px;
+            background: conic-gradient(
+                from 0deg,
+                rgba(255, 100, 100, 0.08) 0deg,
+                rgba(255, 150, 150, 0.12) 72deg,
+                rgba(255, 200, 200, 0.08) 144deg,
+                rgba(255, 100, 100, 0.04) 216deg,
+                rgba(255, 150, 150, 0.08) 288deg,
+                rgba(255, 100, 100, 0.08) 360deg
+            );
+            border-radius: 50%;
+            animation: expansionPulse calc(25s / var(--dispersion-strength)) ease-in-out infinite;
+            transform-style: preserve-3d;
+        }
+        
+        @keyframes expansionPulse {
+            0% { transform: scale(0.8) rotateZ(0deg) rotateX(10deg); opacity: 0.6; }
+            25% { transform: scale(1.2) rotateZ(90deg) rotateX(15deg); opacity: 0.8; }
+            50% { transform: scale(1.5) rotateZ(180deg) rotateX(20deg); opacity: 1.0; }
+            75% { transform: scale(1.8) rotateZ(270deg) rotateX(15deg); opacity: 0.8; }
+            100% { transform: scale(2.2) rotateZ(360deg) rotateX(10deg); opacity: 0.4; }
+        }
+        
+        /* DISPERSION NODES - FLYING APART */
+        .dispersion-node {
+            position: absolute;
+            width: 140px;
+            height: 90px;
+            background: linear-gradient(135deg, 
+                rgba(255, 100, 100, calc(0.15 + var(--dispersion-strength) * 0.2)) 0%,
+                rgba(255, 50, 50, calc(0.1 + var(--thermal-energy) * 0.15)) 50%,
+                rgba(200, 0, 0, calc(0.08 + var(--radiation-pressure) * 0.12)) 100%
+            );
+            border: 2px solid rgba(255, 100, 100, calc(0.5 + var(--dispersion-strength) * 0.3));
+            border-radius: 10px;
+            backdrop-filter: blur(calc(6px + var(--entropy-increase) * 10px));
+            transform-style: preserve-3d;
+            transition: all 1.0s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            overflow: hidden;
+            
+            box-shadow: 
+                0 calc(12px * var(--dispersion-strength)) calc(35px * var(--dispersion-strength)) rgba(40, 0, 0, 0.9),
+                0 6px 20px rgba(255, 100, 100, calc(0.4 * var(--thermal-energy))),
+                inset 0 1px 1px rgba(255, 100, 100, calc(0.6 * var(--radiation-pressure)));
+        }
+        
+        /* EXPLOSIVE DISPERSION PATHS */
+        .node-1 {
+            animation: explosiveDispersion1 calc(12s / var(--dispersion-strength)) ease-out infinite;
+        }
+        
+        .node-2 {
+            animation: explosiveDispersion2 calc(14s / var(--dispersion-strength)) ease-out infinite;
+        }
+        
+        .node-3 {
+            animation: explosiveDispersion3 calc(16s / var(--dispersion-strength)) ease-out infinite;
+        }
+        
+        .node-4 {
+            animation: explosiveDispersion4 calc(18s / var(--dispersion-strength)) ease-out infinite;
+        }
+        
+        .node-5 {
+            animation: explosiveDispersion5 calc(20s / var(--dispersion-strength)) ease-out infinite;
+        }
+        
+        .node-6 {
+            animation: explosiveDispersion6 calc(22s / var(--dispersion-strength)) ease-out infinite;
+        }
+        
+        /* EXPLOSIVE DISPERSION ANIMATIONS */
+        @keyframes explosiveDispersion1 {
+            0% { 
+                transform: translate(0px, 0px) scale(1.2) rotateZ(0deg);
+                opacity: 1.0;
+            }
+            25% { 
+                transform: translate(200px, -150px) scale(1.0) rotateZ(45deg);
+                opacity: 0.9;
+            }
+            50% { 
+                transform: translate(400px, -300px) scale(0.8) rotateZ(90deg);
+                opacity: 0.7;
+            }
+            75% { 
+                transform: translate(600px, -450px) scale(0.6) rotateZ(135deg);
+                opacity: 0.4;
+            }
+            100% { 
+                transform: translate(800px, -600px) scale(0.3) rotateZ(180deg);
+                opacity: 0.1;
+            }
+        }
+        
+        @keyframes explosiveDispersion2 {
+            0% { 
+                transform: translate(0px, 0px) scale(1.1) rotateZ(60deg);
+                opacity: 1.0;
+            }
+            30% { 
+                transform: translate(-180px, 220px) scale(0.9) rotateZ(120deg);
+                opacity: 0.8;
+            }
+            60% { 
+                transform: translate(-360px, 440px) scale(0.7) rotateZ(180deg);
+                opacity: 0.6;
+            }
+            100% { 
+                transform: translate(-720px, 660px) scale(0.2) rotateZ(300deg);
+                opacity: 0.0;
+            }
+        }
+        
+        @keyframes explosiveDispersion3 {
+            0% { 
+                transform: translate(0px, 0px) scale(1.3) rotateZ(120deg);
+                opacity: 1.0;
+            }
+            20% { 
+                transform: translate(150px, 200px) scale(1.0) rotateZ(200deg);
+                opacity: 0.9;
+            }
+            40% { 
+                transform: translate(300px, 400px) scale(0.8) rotateZ(280deg);
+                opacity: 0.7;
+            }
+            70% { 
+                transform: translate(500px, 600px) scale(0.5) rotateZ(400deg);
+                opacity: 0.3;
+            }
+            100% { 
+                transform: translate(750px, 900px) scale(0.1) rotateZ(540deg);
+                opacity: 0.0;
+            }
+        }
+        
+        @keyframes explosiveDispersion4 {
+            0% { 
+                transform: translate(0px, 0px) scale(1.0) rotateZ(180deg);
+                opacity: 1.0;
+            }
+            35% { 
+                transform: translate(-250px, -180px) scale(0.85) rotateZ(270deg);
+                opacity: 0.8;
+            }
+            70% { 
+                transform: translate(-500px, -360px) scale(0.6) rotateZ(360deg);
+                opacity: 0.5;
+            }
+            100% { 
+                transform: translate(-800px, -540px) scale(0.2) rotateZ(540deg);
+                opacity: 0.0;
+            }
+        }
+        
+        @keyframes explosiveDispersion5 {
+            0% { 
+                transform: translate(0px, 0px) scale(1.15) rotateZ(240deg);
+                opacity: 1.0;
+            }
+            25% { 
+                transform: translate(170px, -250px) scale(0.95) rotateZ(300deg);
+                opacity: 0.85;
+            }
+            50% { 
+                transform: translate(340px, -500px) scale(0.75) rotateZ(420deg);
+                opacity: 0.6;
+            }
+            80% { 
+                transform: translate(580px, -750px) scale(0.4) rotateZ(540deg);
+                opacity: 0.25;
+            }
+            100% { 
+                transform: translate(780px, -1000px) scale(0.1) rotateZ(660deg);
+                opacity: 0.0;
+            }
+        }
+        
+        @keyframes explosiveDispersion6 {
+            0% { 
+                transform: translate(0px, 0px) scale(1.25) rotateZ(300deg);
+                opacity: 1.0;
+            }
+            15% { 
+                transform: translate(-120px, 180px) scale(1.1) rotateZ(360deg);
+                opacity: 0.95;
+            }
+            40% { 
+                transform: translate(-300px, 380px) scale(0.8) rotateZ(480deg);
+                opacity: 0.7;
+            }
+            70% { 
+                transform: translate(-520px, 580px) scale(0.5) rotateZ(600deg);
+                opacity: 0.35;
+            }
+            100% { 
+                transform: translate(-800px, 800px) scale(0.15) rotateZ(720deg);
+                opacity: 0.0;
+            }
+        }
+        
+        /* DISPERSION NODE CONTENT */
+        .node-content {
+            position: relative;
+            z-index: 10;
+            padding: 10px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .node-title {
+            font-size: calc(0.8rem + var(--dispersion-strength) * 0.15rem);
+            font-weight: 700;
+            margin-bottom: 3px;
+            color: rgba(255, 255, 255, calc(0.85 + var(--thermal-energy) * 0.15));
+            text-shadow: 0 0 8px rgba(255, 100, 100, calc(0.5 + var(--radiation-pressure) * 0.3));
+        }
+        
+        .node-description {
+            font-size: calc(0.55rem + var(--dispersion-strength) * 0.08rem);
+            color: rgba(255, 200, 200, calc(0.7 + var(--thermal-energy) * 0.2));
+            line-height: 1.2;
+        }
+        
+        .dispersion-metrics {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3px;
+            margin-top: 5px;
+        }
+        
+        .metric-item {
+            font-size: 0.5rem;
+            color: rgba(255, 150, 150, 0.8);
+        }
+        
+        .metric-value {
+            font-weight: bold;
+            color: rgba(255, 100, 100, 1.0);
+        }
+        
+        /* THERMAL MOTION VISUALIZATION */
+        .thermal-particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 100, 100, 0.8);
+            border-radius: 50%;
+            opacity: 0;
+            pointer-events: none;
+            animation: thermalMotion calc(3s / var(--thermal-energy)) linear infinite;
+        }
+        
+        @keyframes thermalMotion {
+            0% { 
+                opacity: 0; 
+                transform: translate(0px, 0px) scale(0);
+            }
+            10% { 
+                opacity: 1; 
+                transform: translate(random-x, random-y) scale(1);
+            }
+            50% { 
+                opacity: 0.8; 
+                transform: translate(calc(var(--thermal-energy) * 100px), calc(var(--thermal-energy) * 100px)) scale(1.5);
+            }
+            100% { 
+                opacity: 0; 
+                transform: translate(calc(var(--thermal-energy) * 200px), calc(var(--thermal-energy) * 200px)) scale(0);
+            }
+        }
+        
+        /* RADIATION PRESSURE WAVES */
+        .radiation-wave {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 200px;
+            height: 200px;
+            margin-left: -100px;
+            margin-top: -100px;
+            border: 3px solid rgba(255, 100, 100, 0.4);
+            border-radius: 50%;
+            opacity: 0;
+            animation: radiationPropagate calc(4s / var(--radiation-pressure)) ease-out infinite;
+        }
+        
+        @keyframes radiationPropagate {
+            0% { opacity: 0.8; transform: scale(0.1); border-width: 3px; }
+            50% { opacity: 0.4; transform: scale(3); border-width: 2px; }
+            100% { opacity: 0; transform: scale(6); border-width: 1px; }
+        }
+        
+        /* HOVER DISPERSION EFFECTS */
+        .dispersion-node:hover {
+            transform: scale(1.4) translateZ(70px);
+            background: linear-gradient(135deg, 
+                rgba(255, 100, 100, calc(0.3 + var(--dispersion-strength) * 0.4)) 0%,
+                rgba(255, 50, 50, calc(0.25 + var(--thermal-energy) * 0.3)) 50%,
+                rgba(200, 0, 0, calc(0.2 + var(--radiation-pressure) * 0.25)) 100%
+            );
+            box-shadow: 
+                0 calc(50px * var(--dispersion-strength)) calc(100px * var(--dispersion-strength)) rgba(60, 0, 0, 0.95),
+                0 20px 60px rgba(255, 100, 100, calc(0.6 + var(--thermal-energy) * 0.3)),
+                inset 0 4px 8px rgba(255, 100, 100, calc(0.8 + var(--radiation-pressure) * 0.2)),
+                0 0 120px rgba(255, 100, 100, calc(0.7 + var(--dispersion-strength) * 0.2));
+        }
+        
+        /* VACUUM ENERGY BACKGROUND */
+        .vacuum-field {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 25% 25%, rgba(255, 100, 100, 0.06) 0%, transparent 40%),
+                radial-gradient(circle at 75% 75%, rgba(255, 50, 50, 0.04) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(200, 0, 0, 0.03) 0%, transparent 60%);
+            animation: vacuumFluctuation calc(30s / var(--vacuum-energy)) ease-in-out infinite;
+        }
+        
+        @keyframes vacuumFluctuation {
+            0%, 100% { opacity: 0.3; filter: brightness(1) hue-rotate(0deg); }
+            25% { opacity: 0.5; filter: brightness(1.3) hue-rotate(-15deg); }
+            50% { opacity: 0.7; filter: brightness(1.6) hue-rotate(-30deg); }
+            75% { opacity: 0.5; filter: brightness(1.3) hue-rotate(-15deg); }
+        }
+        
+        /* DISPERSION CONTROLS */
+        .dispersion-controls {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            background: rgba(40, 0, 0, 0.8);
+            border: 1px solid rgba(255, 100, 100, 0.3);
+            border-radius: 12px;
+            padding: 15px;
+            backdrop-filter: blur(10px);
+            font-size: 12px;
+            min-width: 290px;
+        }
+        
+        .control-title {
+            color: #ff6464;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        
+        .control-group {
+            margin: 8px 0;
+        }
+        
+        .control-label {
+            color: #ffa0a0;
+            font-size: 10px;
+            margin-bottom: 3px;
+            display: block;
+        }
+        
+        .control-slider {
+            width: 100%;
+            height: 4px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 2px;
+            outline: none;
+            -webkit-appearance: none;
+        }
+        
+        .control-slider::-webkit-slider-thumb {
+            appearance: none;
+            width: 12px;
+            height: 12px;
+            background: #ff6464;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        
+        /* EPO-D EQUATION DISPLAY */
+        .equation-display {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: rgba(40, 0, 0, 0.9);
+            border: 1px solid rgba(255, 100, 100, 0.4);
+            border-radius: 12px;
+            padding: 20px;
+            backdrop-filter: blur(15px);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 14px;
+            color: #ffa0a0;
+            max-width: 370px;
+        }
+        
+        .equation-title {
+            color: #ff6464;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        
+        .equation {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            border-radius: 8px;
+            margin: 8px 0;
+            border-left: 3px solid #ff6464;
+        }
+        
+        /* NAVIGATION */
+        .nav-panel {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            background: rgba(40, 0, 0, 0.8);
+            border: 1px solid rgba(255, 100, 100, 0.3);
+            border-radius: 20px;
+            padding: 12px 25px;
+            backdrop-filter: blur(10px);
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+        
+        .nav-btn {
+            background: rgba(255, 100, 100, 0.2);
+            border: 1px solid rgba(255, 100, 100, 0.4);
+            color: #ff6464;
+            padding: 6px 12px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 11px;
+            text-decoration: none;
+        }
+        
+        .nav-btn:hover {
+            background: rgba(255, 100, 100, 0.4);
+            transform: translateY(-1px);
+        }
+        
+        .nav-btn.active {
+            background: rgba(255, 100, 100, 0.6);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Vacuum Field Background -->
+    <div class="vacuum-field"></div>
+    
+    <!-- Dispersion Container -->
+    <div class="dispersion-container">
+        <!-- Expansion Field -->
+        <div class="expansion-field"></div>
+        
+        <!-- Dispersion Nodes Flying Apart -->
+        <div class="dispersion-node node-1" data-dispersion="thermal">
+            <div class="node-content">
+                <div>
+                    <div class="node-title">🔥 Thermal Dispersion</div>
+                    <div class="node-description">C_T·(k_B T) - thermal energy driving systems toward equilibrium through kinetic motion</div>
+                </div>
+                <div class="dispersion-metrics">
+                    <div class="metric-item">T: <span class="metric-value">2.7K</span></div>
+                    <div class="metric-item">k_B: <span class="metric-value">1.38×10⁻²³</span></div>
+                    <div class="metric-item">Eq: <span class="metric-value">78%</span></div>
+                    <div class="metric-item">Heat: <span class="metric-value">High</span></div>
+                </div>
+            </div>
+            <div class="thermal-particle"></div>
+        </div>
+        
+        <div class="dispersion-node node-2" data-dispersion="radiation">
+            <div class="node-content">
+                <div>
+                    <div class="node-title">📡 Radiation Pressure</div>
+                    <div class="node-description">C_R·ρ_R - radiation energy density creating outward pressure through photon momentum</div>
+                </div>
+                <div class="dispersion-metrics">
+                    <div class="metric-item">ρ_R: <span class="metric-value">4.6×10⁻³¹</span></div>
+                    <div class="metric-item">C_R: <span class="metric-value">0.8</span></div>
+                    <div class="metric-item">Press: <span class="metric-value">Medium</span></div>
+                    <div class="metric-item">Push: <span class="metric-value">Outward</span></div>
+                </div>
+            </div>
+            <div class="radiation-wave"></div>
+        </div>
+        
+        <div class="dispersion-node node-3" data-dispersion="vacuum">
+            <div class="node-content">
+                <div>
+                    <div class="node-title">🌌 Vacuum Energy</div>
+                    <div class="node-description">U_vac - inherent energetic activity of "empty" space driving cosmic expansion</div>
+                </div>
+                <div class="dispersion-metrics">
+                    <div class="metric-item">Λ: <span class="metric-value">1.1×10⁻⁵²</span></div>
+                    <div class="metric-item">Dark: <span class="metric-value">68%</span></div>
+                    <div class="metric-item">Exp: <span class="metric-value">Accel</span></div>
+                    <div class="metric-item">Space: <span class="metric-value">Growing</span></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dispersion-node node-4" data-dispersion="entropy">
+            <div class="node-content">
+                <div>
+                    <div class="node-title">📈 Entropy Increase</div>
+                    <div class="node-description">Second Law manifestation - universal tendency toward maximum disorder and heat death</div>
+                </div>
+                <div class="dispersion-metrics">
+                    <div class="metric-item">ΔS: <span class="metric-value">+∞</span></div>
+                    <div class="metric-item">Order: <span class="metric-value">Decreasing</span></div>
+                    <div class="metric-item">Info: <span class="metric-value">Spreading</span></div>
+                    <div class="metric-item">Time: <span class="metric-value">→</span></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dispersion-node node-5" data-dispersion="expansion">
+            <div class="node-content">
+                <div>
+                    <div class="node-title">🚀 Cosmic Expansion</div>
+                    <div class="node-description">Hubble flow - spacetime itself expanding, carrying matter apart at accelerating rate</div>
+                </div>
+                <div class="dispersion-metrics">
+                    <div class="metric-item">H₀: <span class="metric-value">73 km/s/Mpc</span></div>
+                    <div class="metric-item">Age: <span class="metric-value">13.8 Gyr</span></div>
+                    <div class="metric-item">Rate: <span class="metric-value">Accelerating</span></div>
+                    <div class="metric-item">Size: <span class="metric-value">Growing</span></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dispersion-node node-6" data-dispersion="heat-death">
+            <div class="node-content">
+                <div>
+                    <div class="node-title">💀 Heat Death</div>
+                    <div class="node-description">Ultimate fate - maximum entropy state where no more work can be extracted from the universe</div>
+                </div>
+                <div class="dispersion-metrics">
+                    <div class="metric-item">Time: <span class="metric-value">10¹⁰⁰ yr</span></div>
+                    <div class="metric-item">Temp: <span class="metric-value">0K</span></div>
+                    <div class="metric-item">Work: <span class="metric-value">None</span></div>
+                    <div class="metric-item">End: <span class="metric-value">Thermal</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Dispersion Controls -->
+    <div class="dispersion-controls">
+        <div class="control-title">💫 EPO-D Parameters</div>
+        
+        <div class="control-group">
+            <label class="control-label">Dispersion Strength</label>
+            <input type="range" class="control-slider" min="0.1" max="2" step="0.1" value="0.9" id="dispersionStrength">
+        </div>
+        
+        <div class="control-group">
+            <label class="control-label">Thermal Energy (k_B T)</label>
+            <input type="range" class="control-slider" min="0" max="1" step="0.1" value="0.7" id="thermalEnergy">
+        </div>
+        
+        <div class="control-group">
+            <label class="control-label">Radiation Pressure</label>
+            <input type="range" class="control-slider" min="0" max="1" step="0.1" value="0.5" id="radiationPressure">
+        </div>
+        
+        <div class="control-group">
+            <label class="control-label">Vacuum Energy (Dark Energy)</label>
+            <input type="range" class="control-slider" min="0" max="1" step="0.1" value="0.3" id="vacuumEnergy">
+        </div>
+        
+        <div class="control-group">
+            <label class="control-label">Expansion Rate (Hubble)</label>
+            <input type="range" class="control-slider" min="50" max="100" step="1" value="73" id="expansionRate">
+        </div>
+    </div>
+    
+    <!-- EPO-D Equation Display -->
+    <div class="equation-display">
+        <div class="equation-title">📐 Dispersive Potential (EPO-D)</div>
+        
+        <div class="equation">
+            <strong>U_d(r) = +(1/r)[C_T·(k_B T) + C_R·ρ_R] + U_vac</strong>
+        </div>
+        
+        <div style="font-size: 11px; margin-top: 10px;">
+            <div><strong>Components:</strong></div>
+            <div>• C_T·(k_B T): Thermal dispersion term</div>
+            <div>• C_R·ρ_R: Radiation pressure term</div>
+            <div>• U_vac: Vacuum energy (dark energy)</div>
+        </div>
+        
+        <div style="font-size: 10px; margin-top: 8px; color: #ff8080;">
+            <div><strong>Result:</strong> Cosmic expansion and entropy increase</div>
+        </div>
+    </div>
+    
+    <!-- Navigation Panel -->
+    <div class="nav-panel">
+        <a href="../index.html" class="nav-btn">🏠 Home</a>
+        <a href="page1-consciousness.html" class="nav-btn">🧠 Consciousness</a>
+        <a href="page2-integration.html" class="nav-btn">🔗 Integration</a>
+        <a href="page3-dispersion.html" class="nav-btn active">💫 Dispersion</a>
+        <a href="page4-emergence.html" class="nav-btn">🌟 Emergence</a>
+        <a href="page5-transcendence.html" class="nav-btn">✨ Transcendence</a>
+    </div>
+    
+    <script>
+        // Real-time EPO-D Parameter Control
+        const controls = {
+            dispersionStrength: document.getElementById('dispersionStrength'),
+            thermalEnergy: document.getElementById('thermalEnergy'),
+            radiationPressure: document.getElementById('radiationPressure'),
+            vacuumEnergy: document.getElementById('vacuumEnergy'),
+            expansionRate: document.getElementById('expansionRate')
+        };
+        
+        // Update CSS variables in real-time
+        Object.keys(controls).forEach(controlName => {
+            const control = controls[controlName];
+            control.addEventListener('input', (e) => {
+                const value = e.target.value;
+                const cssVarName = '--' + controlName.replace(/[A-Z]/g, letter => `-${letter.toLowerCase()}`);
+                document.documentElement.style.setProperty(cssVarName, value);
+                
+                console.log(`💫 ${controlName}: ${value}`);
+            });
+        });
+        
+        // Dispersion Node Interaction
+        document.querySelectorAll('.dispersion-node').forEach(node => {
+            node.addEventListener('mouseenter', () => {
+                // Increase dispersion forces
+                const currentStrength = parseFloat(document.documentElement.style.getPropertyValue('--dispersion-strength')) || 0.9;
+                document.documentElement.style.setProperty('--dispersion-strength', Math.min(currentStrength + 0.3, 2.0));
+                
+                // Activate thermal particles
+                const particle = node.querySelector('.thermal-particle');
+                if (particle) {
+                    particle.style.animation = 'thermalMotion 1s linear infinite';
+                }
+                
+                // Activate radiation waves
+                const wave = node.querySelector('.radiation-wave');
+                if (wave) {
+                    wave.style.animation = 'radiationPropagate 2s ease-out infinite';
+                }
+                
+                console.log(`💫 Dispersion enhanced: ${node.dataset.dispersion}`);
+            });
+            
+            node.addEventListener('mouseleave', () => {
+                // Return to normal
+                const originalStrength = parseFloat(controls.dispersionStrength.value);
+                document.documentElement.style.setProperty('--dispersion-strength', originalStrength);
+                
+                const particle = node.querySelector('.thermal-particle');
+                if (particle) {
+                    particle.style.animation = 'thermalMotion calc(3s / var(--thermal-energy)) linear infinite';
+                }
+                
+                const wave = node.querySelector('.radiation-wave');
+                if (wave) {
+                    wave.style.animation = 'radiationPropagate calc(4s / var(--radiation-pressure)) ease-out infinite';
+                }
+            });
+            
+            node.addEventListener('click', () => {
+                // Dispersion burst - everything flies apart
+                document.documentElement.style.setProperty('--dispersion-strength', 2.0);
+                document.documentElement.style.setProperty('--thermal-energy', 1.0);
+                document.documentElement.style.setProperty('--radiation-pressure', 1.0);
+                
+                setTimeout(() => {
+                    document.documentElement.style.setProperty('--dispersion-strength', controls.dispersionStrength.value);
+                    document.documentElement.style.setProperty('--thermal-energy', controls.thermalEnergy.value);
+                    document.documentElement.style.setProperty('--radiation-pressure', controls.radiationPressure.value);
+                }, 2000);
+                
+                console.log(`💫 Dispersion burst: ${node.dataset.dispersion}`);
+            });
+        });
+        
+        // Continuous EPO-D field evolution
+        setInterval(() => {
+            const time = Date.now() * 0.0005;
+            
+            // Oscillating dispersion parameters based on thermodynamic cycles
+            const temperatureOscillation = 2.7 + Math.sin(time * 0.4) * 0.3;
+            const entropyOscillation = 0.8 + Math.cos(time * 0.6) * 0.1;
+            const darkEnergyOscillation = 0.68 + Math.sin(time * 0.2) * 0.05;
+            
+            document.documentElement.style.setProperty('--temperature', temperatureOscillation);
+            document.documentElement.style.setProperty('--entropy-increase', entropyOscillation);
+            document.documentElement.style.setProperty('--dark-energy', darkEnergyOscillation);
+            
+            // Create random thermal particles
+            if (Math.random() < 0.1) {
+                createThermalParticle();
+            }
+        }, 200);
+        
+        // Create thermal particles for Brownian motion simulation
+        function createThermalParticle() {
+            const particle = document.createElement('div');
+            particle.className = 'thermal-particle';
+            particle.style.left = Math.random() * window.innerWidth + 'px';
+            particle.style.top = Math.random() * window.innerHeight + 'px';
+            
+            document.querySelector('.dispersion-container').appendChild(particle);
+            
+            setTimeout(() => {
+                if (particle.parentNode) {
+                    particle.parentNode.removeChild(particle);
+                }
+            }, 3000);
+        }
+        
+        console.log('💫 Dispersion Field initialized - Experience the universal force of entropy and expansion');
+    </script>
+</body>
+</html>

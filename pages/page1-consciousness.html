@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧠 Consciousness Layer - Neural Dreamscape</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=JetBrains+Mono:wght@400;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: #000;
+            color: white;
+            font-family: 'Orbitron', 'Courier New', monospace;
+            overflow: hidden;
+            height: 100vh;
+            cursor: crosshair;
+            background: radial-gradient(ellipse at center, #0a0a2e 0%, #1a0a3e 30%, #000000 70%);
+            
+            /* CONSCIOUSNESS ORBITAL MOTION VARIABLES */
+            --orbital-speed: 1.0;
+            --consciousness-depth: 0.5;
+            --integration-force: 0.3;
+            --dispersion-force: 0.7;
+            --information-density: 0.4;
+            --thought-velocity: 0.2;
+            --awareness-radius: 200px;
+            --empathy-field: 0.6;
+            --neural-coherence: 0.8;
+            --memory-persistence: 0.5;
+        }
+        
+        /* ENTROPIC CONSCIOUSNESS CONTAINER */
+        .consciousness-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            perspective: 2000px;
+            transform-style: preserve-3d;
+        }
+        
+        /* CONSCIOUSNESS ORBITAL SYSTEM */
+        .consciousness-orbit {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: var(--awareness-radius);
+            height: var(--awareness-radius);
+            margin-left: calc(var(--awareness-radius) / -2);
+            margin-top: calc(var(--awareness-radius) / -2);
+            transform-style: preserve-3d;
+            animation: consciousnessOrbit calc(20s / var(--orbital-speed)) linear infinite;
+        }
+        
+        @keyframes consciousnessOrbit {
+            0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+            33% { transform: rotateX(120deg) rotateY(120deg) rotateZ(120deg); }
+            66% { transform: rotateX(240deg) rotateY(240deg) rotateZ(240deg); }
+            100% { transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
+        }
+        
+        /* CONSCIOUSNESS NODES - MOVING CARDS */
+        .consciousness-node {
+            position: absolute;
+            width: 180px;
+            height: 120px;
+            background: linear-gradient(135deg, 
+                rgba(100, 200, 255, calc(0.1 + var(--consciousness-depth) * 0.2)) 0%,
+                rgba(50, 150, 255, calc(0.05 + var(--neural-coherence) * 0.15)) 50%,
+                rgba(0, 100, 200, calc(0.03 + var(--empathy-field) * 0.1)) 100%
+            );
+            border: 2px solid rgba(100, 200, 255, calc(0.3 + var(--consciousness-depth) * 0.5));
+            border-radius: 15px;
+            backdrop-filter: blur(calc(10px + var(--neural-coherence) * 15px));
+            transform-style: preserve-3d;
+            transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+            overflow: hidden;
+            
+            /* ENTROPIC SHADOW CASTING */
+            box-shadow: 
+                0 calc(10px * var(--consciousness-depth)) calc(30px * var(--consciousness-depth)) rgba(0, 20, 40, 0.8),
+                0 5px 20px rgba(100, 200, 255, calc(0.2 * var(--neural-coherence))),
+                inset 0 1px 1px rgba(100, 200, 255, calc(0.4 * var(--empathy-field)));
+        }
+        
+        /* ORBITAL POSITIONING FOR EACH NODE */
+        .node-1 {
+            transform: rotateX(0deg) translateZ(calc(var(--awareness-radius) * 0.8)) rotateX(0deg);
+            animation: nodeFloat1 calc(8s / var(--orbital-speed)) ease-in-out infinite;
+        }
+        
+        .node-2 {
+            transform: rotateX(60deg) translateZ(calc(var(--awareness-radius) * 0.8)) rotateX(-60deg);
+            animation: nodeFloat2 calc(9s / var(--orbital-speed)) ease-in-out infinite;
+        }
+        
+        .node-3 {
+            transform: rotateX(120deg) translateZ(calc(var(--awareness-radius) * 0.8)) rotateX(-120deg);
+            animation: nodeFloat3 calc(10s / var(--orbital-speed)) ease-in-out infinite;
+        }
+        
+        .node-4 {
+            transform: rotateX(180deg) translateZ(calc(var(--awareness-radius) * 0.8)) rotateX(-180deg);
+            animation: nodeFloat4 calc(11s / var(--orbital-speed)) ease-in-out infinite;
+        }
+        
+        .node-5 {
+            transform: rotateX(240deg) translateZ(calc(var(--awareness-radius) * 0.8)) rotateX(-240deg);
+            animation: nodeFloat5 calc(12s / var(--orbital-speed)) ease-in-out infinite;
+        }
+        
+        .node-6 {
+            transform: rotateX(300deg) translateZ(calc(var(--awareness-radius) * 0.8)) rotateX(-300deg);
+            animation: nodeFloat6 calc(13s / var(--orbital-speed)) ease-in-out infinite;
+        }
+        
+        /* UNIQUE FLOATING ANIMATIONS FOR EACH NODE */
+        @keyframes nodeFloat1 {
+            0%, 100% { transform: rotateX(0deg) translateZ(calc(var(--awareness-radius) * 0.8)) rotateX(0deg) translateY(0px); }
+            50% { transform: rotateX(0deg) translateZ(calc(var(--awareness-radius) * 1.2)) rotateX(0deg) translateY(-20px); }
+        }
+        
+        @keyframes nodeFloat2 {
+            0%, 100% { transform: rotateX(60deg) translateZ(calc(var(--awareness-radius) * 0.8)) rotateX(-60deg) translateY(0px); }
+            50% { transform: rotateX(60deg) translateZ(calc(var(--awareness-radius) * 1.1)) rotateX(-60deg) translateY(-15px); }
+        }
+        
+        @keyframes nodeFloat3 {
+            0%, 100% { transform: rotateX(120deg) translateZ(calc(var(--awareness-radius) * 0.8)) rotateX(-120deg) translateY(0px); }
+            50% { transform: rotateX(120deg) translateZ(calc(var(--awareness-radius) * 1.3)) rotateX(-120deg) translateY(-25px); }
+        }
+        
+        @keyframes nodeFloat4 {
+            0%, 100% { transform: rotateX(180deg) translateZ(calc(var(--awareness-radius) * 0.8)) rotateX(-180deg) translateY(0px); }
+            50% { transform: rotateX(180deg) translateZ(calc(var(--awareness-radius) * 0.9)) rotateX(-180deg) translateY(-10px); }
+        }
+        
+        @keyframes nodeFloat5 {
+            0%, 100% { transform: rotateX(240deg) translateZ(calc(var(--awareness-radius) * 0.8)) rotateX(-240deg) translateY(0px); }
+            50% { transform: rotateX(240deg) translateZ(calc(var(--awareness-radius) * 1.4)) rotateX(-240deg) translateY(-30px); }
+        }
+        
+        @keyframes nodeFloat6 {
+            0%, 100% { transform: rotateX(300deg) translateZ(calc(var(--awareness-radius) * 0.8)) rotateX(-300deg) translateY(0px); }
+            50% { transform: rotateX(300deg) translateZ(calc(var(--awareness-radius) * 1.1)) rotateX(-300deg) translateY(-18px); }
+        }
+        
+        /* CONSCIOUSNESS NODE CONTENT */
+        .node-content {
+            position: relative;
+            z-index: 10;
+            padding: 15px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .node-title {
+            font-size: calc(0.9rem + var(--consciousness-depth) * 0.2rem);
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: rgba(255, 255, 255, calc(0.9 + var(--neural-coherence) * 0.1));
+            text-shadow: 0 0 10px rgba(100, 200, 255, calc(0.4 + var(--empathy-field) * 0.4));
+        }
+        
+        .node-description {
+            font-size: calc(0.65rem + var(--consciousness-depth) * 0.1rem);
+            color: rgba(200, 230, 255, calc(0.7 + var(--neural-coherence) * 0.2));
+            line-height: 1.3;
+        }
+        
+        .entropic-meter {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 8px;
+            gap: 5px;
+        }
+        
+        .meter-bar {
+            height: 3px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 2px;
+            flex: 1;
+            overflow: hidden;
+        }
+        
+        .meter-fill {
+            height: 100%;
+            background: linear-gradient(90deg, 
+                rgba(100, 200, 255, 0.6) 0%, 
+                rgba(150, 220, 255, 0.8) 50%, 
+                rgba(200, 240, 255, 1.0) 100%);
+            transition: width 0.5s ease;
+            animation: entropicPulse 3s ease-in-out infinite;
+        }
+        
+        @keyframes entropicPulse {
+            0%, 100% { opacity: 0.7; transform: scaleX(1); }
+            50% { opacity: 1.0; transform: scaleX(1.1); }
+        }
+        
+        /* CONSCIOUSNESS INTERACTION EFFECTS */
+        .consciousness-node:hover {
+            transform: scale(1.2) translateZ(50px);
+            background: linear-gradient(135deg, 
+                rgba(100, 200, 255, calc(0.2 + var(--consciousness-depth) * 0.3)) 0%,
+                rgba(50, 150, 255, calc(0.15 + var(--neural-coherence) * 0.25)) 50%,
+                rgba(0, 100, 200, calc(0.1 + var(--empathy-field) * 0.2)) 100%
+            );
+            box-shadow: 
+                0 calc(30px * var(--consciousness-depth)) calc(60px * var(--consciousness-depth)) rgba(0, 30, 60, 0.9),
+                0 10px 40px rgba(100, 200, 255, calc(0.4 + var(--neural-coherence) * 0.4)),
+                inset 0 2px 4px rgba(100, 200, 255, calc(0.6 + var(--empathy-field) * 0.4)),
+                0 0 80px rgba(100, 200, 255, calc(0.5 + var(--consciousness-depth) * 0.3));
+        }
+        
+        /* THOUGHT PROPAGATION WAVES */
+        .thought-wave {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100px;
+            height: 100px;
+            margin-left: -50px;
+            margin-top: -50px;
+            border: 2px solid rgba(100, 200, 255, 0.6);
+            border-radius: 50%;
+            opacity: 0;
+            animation: thoughtPropagate 3s ease-out infinite;
+        }
+        
+        @keyframes thoughtPropagate {
+            0% { opacity: 0.8; transform: scale(0.1); }
+            50% { opacity: 0.4; transform: scale(2); }
+            100% { opacity: 0; transform: scale(4); }
+        }
+        
+        /* ENTROPIC FIELD BACKGROUND */
+        .entropic-field {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(100, 200, 255, 0.1) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(50, 150, 255, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 60% 20%, rgba(0, 100, 200, 0.06) 0%, transparent 60%);
+            animation: entropicFieldShift 20s ease-in-out infinite;
+        }
+        
+        @keyframes entropicFieldShift {
+            0%, 100% { opacity: 0.3; filter: hue-rotate(0deg); }
+            33% { opacity: 0.5; filter: hue-rotate(120deg); }
+            66% { opacity: 0.4; filter: hue-rotate(240deg); }
+        }
+        
+        /* NAVIGATION */
+        .nav-panel {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            background: rgba(0, 20, 40, 0.8);
+            border: 1px solid rgba(100, 200, 255, 0.3);
+            border-radius: 20px;
+            padding: 12px 25px;
+            backdrop-filter: blur(10px);
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+        
+        .nav-btn {
+            background: rgba(100, 200, 255, 0.2);
+            border: 1px solid rgba(100, 200, 255, 0.4);
+            color: #64c8ff;
+            padding: 6px 12px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 11px;
+            text-decoration: none;
+        }
+        
+        .nav-btn:hover {
+            background: rgba(100, 200, 255, 0.4);
+            transform: translateY(-1px);
+        }
+        
+        .nav-btn.active {
+            background: rgba(100, 200, 255, 0.6);
+            color: white;
+        }
+        
+        /* ENTROPIC CONTROLS */
+        .entropic-controls {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: rgba(0, 20, 40, 0.8);
+            border: 1px solid rgba(100, 200, 255, 0.3);
+            border-radius: 12px;
+            padding: 15px;
+            backdrop-filter: blur(10px);
+            font-size: 12px;
+            min-width: 250px;
+        }
+        
+        .control-group {
+            margin: 10px 0;
+        }
+        
+        .control-label {
+            color: #a0c4ff;
+            font-size: 10px;
+            margin-bottom: 5px;
+            display: block;
+        }
+        
+        .control-slider {
+            width: 100%;
+            height: 4px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 2px;
+            outline: none;
+            -webkit-appearance: none;
+        }
+        
+        .control-slider::-webkit-slider-thumb {
+            appearance: none;
+            width: 12px;
+            height: 12px;
+            background: #64c8ff;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Entropic Field Background -->
+    <div class="entropic-field"></div>
+    
+    <!-- Consciousness Container -->
+    <div class="consciousness-container">
+        <!-- Consciousness Orbital System -->
+        <div class="consciousness-orbit">
+            <!-- Moving Consciousness Nodes -->
+            <div class="consciousness-node node-1" data-consciousness="primary">
+                <div class="node-content">
+                    <div>
+                        <div class="node-title">🧠 Primary Consciousness</div>
+                        <div class="node-description">Core awareness processing - the fundamental observer-state that processes all other information streams</div>
+                    </div>
+                    <div class="entropic-meter">
+                        <div class="meter-bar"><div class="meter-fill" style="width: 85%"></div></div>
+                        <div class="meter-bar"><div class="meter-fill" style="width: 70%"></div></div>
+                    </div>
+                </div>
+                <div class="thought-wave"></div>
+            </div>
+            
+            <div class="consciousness-node node-2" data-consciousness="integration">
+                <div class="node-content">
+                    <div>
+                        <div class="node-title">🔗 Integration Field</div>
+                        <div class="node-description">EPO-I manifesting as consciousness integration - binding separate awareness streams into unified experience</div>
+                    </div>
+                    <div class="entropic-meter">
+                        <div class="meter-bar"><div class="meter-fill" style="width: 92%"></div></div>
+                        <div class="meter-bar"><div class="meter-fill" style="width: 60%"></div></div>
+                    </div>
+                </div>
+                <div class="thought-wave"></div>
+            </div>
+            
+            <div class="consciousness-node node-3" data-consciousness="dispersion">
+                <div class="node-content">
+                    <div>
+                        <div class="node-title">💫 Dispersive Awareness</div>
+                        <div class="node-description">EPO-D in consciousness - attention diffusion and the exploration of possibility space through scattered focus</div>
+                    </div>
+                    <div class="entropic-meter">
+                        <div class="meter-bar"><div class="meter-fill" style="width: 45%"></div></div>
+                        <div class="meter-bar"><div class="meter-fill" style="width: 88%"></div></div>
+                    </div>
+                </div>
+                <div class="thought-wave"></div>
+            </div>
+            
+            <div class="consciousness-node node-4" data-consciousness="memory">
+                <div class="node-content">
+                    <div>
+                        <div class="node-title">📚 Memory Crystallization</div>
+                        <div class="node-description">Information persistence through entropic crystallization - experiences forming stable neural architectures</div>
+                    </div>
+                    <div class="entropic-meter">
+                        <div class="meter-bar"><div class="meter-fill" style="width: 75%"></div></div>
+                        <div class="meter-bar"><div class="meter-fill" style="width: 65%"></div></div>
+                    </div>
+                </div>
+                <div class="thought-wave"></div>
+            </div>
+            
+            <div class="consciousness-node node-5" data-consciousness="creativity">
+                <div class="node-content">
+                    <div>
+                        <div class="node-title">🎨 Creative Emergence</div>
+                        <div class="node-description">Novel pattern generation through entropic interplay - consciousness creating unprecedented information structures</div>
+                    </div>
+                    <div class="entropic-meter">
+                        <div class="meter-bar"><div class="meter-fill" style="width: 95%"></div></div>
+                        <div class="meter-bar"><div class="meter-fill" style="width: 80%"></div></div>
+                    </div>
+                </div>
+                <div class="thought-wave"></div>
+            </div>
+            
+            <div class="consciousness-node node-6" data-consciousness="transcendence">
+                <div class="node-content">
+                    <div>
+                        <div class="node-title">✨ Transcendent States</div>
+                        <div class="node-description">Consciousness beyond individual boundaries - accessing universal information fields and collective awareness</div>
+                    </div>
+                    <div class="entropic-meter">
+                        <div class="meter-bar"><div class="meter-fill" style="width: 100%"></div></div>
+                        <div class="meter-bar"><div class="meter-fill" style="width: 95%"></div></div>
+                    </div>
+                </div>
+                <div class="thought-wave"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Entropic Controls -->
+    <div class="entropic-controls">
+        <div style="color: #64c8ff; font-weight: bold; margin-bottom: 10px;">🌊 Consciousness Parameters</div>
+        
+        <div class="control-group">
+            <label class="control-label">Orbital Speed</label>
+            <input type="range" class="control-slider" min="0.1" max="3" step="0.1" value="1" id="orbitalSpeed">
+        </div>
+        
+        <div class="control-group">
+            <label class="control-label">Consciousness Depth</label>
+            <input type="range" class="control-slider" min="0" max="1" step="0.1" value="0.5" id="consciousnessDepth">
+        </div>
+        
+        <div class="control-group">
+            <label class="control-label">Integration Force (EPO-I)</label>
+            <input type="range" class="control-slider" min="0" max="1" step="0.1" value="0.3" id="integrationForce">
+        </div>
+        
+        <div class="control-group">
+            <label class="control-label">Dispersion Force (EPO-D)</label>
+            <input type="range" class="control-slider" min="0" max="1" step="0.1" value="0.7" id="dispersionForce">
+        </div>
+        
+        <div class="control-group">
+            <label class="control-label">Awareness Radius</label>
+            <input type="range" class="control-slider" min="100" max="400" step="10" value="200" id="awarenessRadius">
+        </div>
+    </div>
+    
+    <!-- Navigation Panel -->
+    <div class="nav-panel">
+        <a href="index.html" class="nav-btn">🏠 Home</a>
+        <a href="page1-consciousness.html" class="nav-btn active">🧠 Consciousness</a>
+        <a href="page2-integration.html" class="nav-btn">🔗 Integration</a>
+        <a href="page3-dispersion.html" class="nav-btn">💫 Dispersion</a>
+        <a href="page4-emergence.html" class="nav-btn">🌟 Emergence</a>
+        <a href="page5-transcendence.html" class="nav-btn">✨ Transcendence</a>
+    </div>
+    
+    <script>
+        // Real-time Entropic Parameter Control
+        const controls = {
+            orbitalSpeed: document.getElementById('orbitalSpeed'),
+            consciousnessDepth: document.getElementById('consciousnessDepth'),
+            integrationForce: document.getElementById('integrationForce'),
+            dispersionForce: document.getElementById('dispersionForce'),
+            awarenessRadius: document.getElementById('awarenessRadius')
+        };
+        
+        // Update CSS variables in real-time
+        Object.keys(controls).forEach(controlName => {
+            const control = controls[controlName];
+            control.addEventListener('input', (e) => {
+                const value = e.target.value;
+                const cssVarName = '--' + controlName.replace(/[A-Z]/g, letter => `-${letter.toLowerCase()}`);
+                
+                if (controlName === 'awarenessRadius') {
+                    document.documentElement.style.setProperty(cssVarName, value + 'px');
+                } else {
+                    document.documentElement.style.setProperty(cssVarName, value);
+                }
+                
+                console.log(`🌊 ${controlName}: ${value}`);
+            });
+        });
+        
+        // Consciousness Node Interaction
+        document.querySelectorAll('.consciousness-node').forEach(node => {
+            node.addEventListener('mouseenter', () => {
+                // Enhance consciousness activity
+                const thoughtWave = node.querySelector('.thought-wave');
+                thoughtWave.style.animation = 'thoughtPropagate 1s ease-out infinite';
+                
+                // Update global consciousness
+                const currentDepth = parseFloat(document.documentElement.style.getPropertyValue('--consciousness-depth')) || 0.5;
+                document.documentElement.style.setProperty('--consciousness-depth', Math.min(currentDepth + 0.1, 1.0));
+            });
+            
+            node.addEventListener('mouseleave', () => {
+                // Return to normal
+                const thoughtWave = node.querySelector('.thought-wave');
+                thoughtWave.style.animation = 'thoughtPropagate 3s ease-out infinite';
+            });
+            
+            node.addEventListener('click', () => {
+                // Consciousness spike
+                const originalDepth = parseFloat(document.documentElement.style.getPropertyValue('--consciousness-depth')) || 0.5;
+                document.documentElement.style.setProperty('--consciousness-depth', 1.0);
+                
+                setTimeout(() => {
+                    document.documentElement.style.setProperty('--consciousness-depth', originalDepth);
+                }, 1000);
+                
+                console.log(`🧠 Consciousness spike: ${node.dataset.consciousness}`);
+            });
+        });
+        
+        // Continuous consciousness evolution
+        setInterval(() => {
+            const time = Date.now() * 0.001;
+            
+            // Oscillating consciousness parameters
+            const integrationOscillation = 0.3 + Math.sin(time * 0.5) * 0.2;
+            const dispersionOscillation = 0.7 + Math.cos(time * 0.3) * 0.2;
+            const coherenceOscillation = 0.8 + Math.sin(time * 0.7) * 0.1;
+            
+            document.documentElement.style.setProperty('--integration-force', integrationOscillation);
+            document.documentElement.style.setProperty('--dispersion-force', dispersionOscillation);
+            document.documentElement.style.setProperty('--neural-coherence', coherenceOscillation);
+        }, 100);
+        
+        console.log('🧠 Consciousness Layer initialized - Experience the entropic dance of awareness');
+    </script>
+</body>
+</html>
