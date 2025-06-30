@@ -1,5 +1,5 @@
 // visualizers/EPODispersiveVisualizer.js
-import { VisualizerBase } from './VisualizerBase.js'; // Assuming a base visualizer class or create one if needed
+import { VisualizerBase } from '/GEMMY-BAPE-EPO/visualizers/VisualizerBase.js';
 
 class EPODispersiveVisualizer extends VisualizerBase {
     constructor(gl, shaderManager, options = {}) {

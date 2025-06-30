@@ -4,15 +4,15 @@
  * Coordinates JsonConfigSystem, HomeMaster, visualizers, and interactions
  */
 
-import { JsonConfigSystem } from './JsonConfigSystem.js';
-import { VIB3HomeMaster } from './VIB3HomeMaster.js';
-import { AgentAPI } from './AgentAPI.js';
-import { VIB34DReactiveCore } from '../visualizers/VIB34DReactiveCore.js';
-import { VIB34DEnhancedCore } from '../visualizers/VIB34DEnhancedCore.js';
-import { HolographicVisualizer } from '../visualizers/HolographicVisualizer.js';
-import { UserEventReactiveCore } from './UserEventReactiveCore.js';
-import { EcosystemReactionEngine } from './EcosystemReactionEngine.js';
-import { NeoskeuomorphicHolographicSystem } from './NeoskeuomorphicHolographicSystem.js';
+import { JsonConfigSystem } from '/GEMMY-BAPE-EPO/src/core/JsonConfigSystem.js';
+import { VIB3HomeMaster } from '/GEMMY-BAPE-EPO/src/core/VIB3HomeMaster.js';
+import { AgentAPI } from '/GEMMY-BAPE-EPO/src/core/AgentAPI.js';
+import { VIB34DReactiveCore } from '/GEMMY-BAPE-EPO/src/visualizers/VIB34DReactiveCore.js';
+import { VIB34DEnhancedCore } from '/GEMMY-BAPE-EPO/src/visualizers/VIB34DEnhancedCore.js';
+import { HolographicVisualizer } from '/GEMMY-BAPE-EPO/src/visualizers/HolographicVisualizer.js';
+import { UserEventReactiveCore } from '/GEMMY-BAPE-EPO/src/core/UserEventReactiveCore.js';
+import { EcosystemReactionEngine } from '/GEMMY-BAPE-EPO/src/core/EcosystemReactionEngine.js';
+import { NeoskeuomorphicHolographicSystem } from '/GEMMY-BAPE-EPO/src/core/NeoskeuomorphicHolographicSystem.js';
 import { EPOAgentController } from '../ai/EPOAgentController.js';
 import { EPONarrativeVisualizer } from '../visualizers/EPONarrativeVisualizer.js';
 

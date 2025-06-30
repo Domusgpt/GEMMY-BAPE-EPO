@@ -1,5 +1,5 @@
 // visualizers/AIPersonalityVisualizer.js
-import { VisualizerBase } from './VisualizerBase.js';
+import { VisualizerBase } from '/GEMMY-BAPE-EPO/visualizers/VisualizerBase.js';
 
 class AIPersonalityVisualizer extends VisualizerBase {
     constructor(gl, shaderManager, options = {}) {

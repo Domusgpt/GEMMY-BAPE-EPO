@@ -1,7 +1,7 @@
 
-import { SystemController } from './core/SystemController.js';
-import { EPONarrativeManager } from './core/EPONarrativeManager.js';
-import { EPOCore } from './core/EPOCore.js';
+import { SystemController } from '/GEMMY-BAPE-EPO/src/core/SystemController.js';
+import { EPONarrativeManager } from '/GEMMY-BAPE-EPO/src/core/EPONarrativeManager.js';
+import { EPOCore } from '/GEMMY-BAPE-EPO/src/core/EPOCore.js';
 
 // Global error handler for better debugging
 window.onerror = function(message, source, lineno, colno, error) {

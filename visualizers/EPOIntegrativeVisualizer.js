@@ -1,5 +1,5 @@
 // visualizers/EPOIntegrativeVisualizer.js
-import { HypercubeCore } from '../core/HypercubeCore.js';
+import { HypercubeCore } from '/GEMMY-BAPE-EPO/core/HypercubeCore.js';
 
 class EPOIntegrativeVisualizer extends HypercubeCore {
     constructor(gl, shaderManager, options = {}) {

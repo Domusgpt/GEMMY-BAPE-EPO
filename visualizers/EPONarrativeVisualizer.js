@@ -1,6 +1,6 @@
 
 // visualizers/EPONarrativeVisualizer.js
-import { VisualizerBase } from './VisualizerBase.js';
+import { VisualizerBase } from '/GEMMY-BAPE-EPO/visualizers/VisualizerBase.js';
 
 class EPONarrativeVisualizer extends VisualizerBase {
     constructor(gl, shaderManager, options = {}) {

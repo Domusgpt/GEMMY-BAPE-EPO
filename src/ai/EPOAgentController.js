@@ -1,4 +1,4 @@
-import { EPOAgent } from './EPOAgent.js';
+import { EPOAgent } from '/GEMMY-BAPE-EPO/src/ai/EPOAgent.js';
 
 class EPOAgentController {
     constructor(visualizers) {
