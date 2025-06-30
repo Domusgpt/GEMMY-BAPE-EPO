@@ -25,10 +25,6 @@ window.addEventListener('load', async () => {
     console.log('🚀 Initializing VIB34D JSON-Driven System...');
     
     try {
-        // Initialize the new JSON-driven SystemController
-        const systemController = new SystemController();
-        await systemController.initialize();
-
         const epoNarrativeManager = new EPONarrativeManager();
         await epoNarrativeManager.loadPaper('/mnt/c/Users/millz/Desktop/GEMMY BAPE/The Entropic Principle of Organization (Final Draft) (1).docx.txt');
         window.epoNarrativeManager = epoNarrativeManager;
